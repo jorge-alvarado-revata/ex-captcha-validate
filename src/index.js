@@ -1,16 +1,11 @@
 'use strict'
 
-var express = require('express')
+import app from './app.js'
+import dotenv from 'dotenv'
+dotenv.config()
 
-var app = module.exports = express()
+const PORT = process.env.PORT || 3033
 
-app.get('/', function(req, res){
-    res.send('Hello World esta es una demo con express');
-  });
-  
-  /* istanbul ignore next */
-  if (!module.parent) {
-    app.listen(3010);
-    console.log('Express started on port 3010');
-  }
-  
+app.listen(PORT, ()=>{
+    console.log(`Express started on port ${PORT}`);
+})
