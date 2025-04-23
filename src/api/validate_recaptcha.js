@@ -36,7 +36,7 @@ router.post('/', async (req, res)=>{
   
   
     if (!GOOGLE_RECAPTCHA_SECRET_KEY){
-      throw new createHTTPError("cloudflare secret key not found!");
+      throw new createHTTPError("google secret key not found!");
     }
     else {
       siteVerifieyReq['secret'] = GOOGLE_RECAPTCHA_SECRET_KEY
