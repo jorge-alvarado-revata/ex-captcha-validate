@@ -11,7 +11,7 @@ router.get('/', function(req, res){
       })
 })
 
-router.use('/validate/recaptcha/', validate_recaptcha)
+router.use('/validate/', validate_recaptcha)
 
 
 export default router
